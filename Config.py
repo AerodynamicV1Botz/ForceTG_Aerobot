@@ -16,7 +16,7 @@ if ENVIRONMENT:
     OWNER_ID=5708737143
     DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")  # Sqlalchemy dropped support for "postgres" name.
     # https://stackoverflow.com/questions/62688256/sqlalchemy-exc-nosuchmoduleerror-cant-load-plugin-sqlalchemy-dialectspostgre
-    MUST_JOIN = os.environ.get('MUST_JOIN', )
+    MUST_JOIN = os.environ.get('MUST_JOIN', "AerodynamicV1_Update")
     if MUST_JOIN.startswith("@"):
         
         MUST_JOIN = MUST_JOIN.replace("@", "")
@@ -25,7 +25,7 @@ else:
     API_ID = ""
     API_HASH = ""
     BOT_TOKEN = ""
-    START_IMG= ""
+    START_IMG = ""
     DATABASE_URL = ""
     BOT_USERNAME=""
     OWNER_ID=1484735126
